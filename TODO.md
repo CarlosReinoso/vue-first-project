@@ -1,0 +1,6 @@
+- style componetns learn to use <Transition/>
+- learn to store state with Pinia
+- API calls and display
+- reuse code with hooks
+- add a blog aspect to this app
+- connect to a db
