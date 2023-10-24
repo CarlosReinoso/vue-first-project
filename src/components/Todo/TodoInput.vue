@@ -12,11 +12,11 @@ export default {
 
     const addItem = () => {
       if (inputValue.value.trim() == "") return;
-      itemList.value.push(inputValue.value);
+      itemList.value.push(inputValue.value as never);
       inputValue.value = "";
     };
 
-    const deleteItem = (index) => {
+    const deleteItem = (index: number) => {
       itemList.value.splice(index, 1);
     };
 
