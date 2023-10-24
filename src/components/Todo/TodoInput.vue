@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import { ref } from "vue";
 import ArrowIcon from "../icons/IconTodoArrow.vue";
 import SupportIcon from "../icons/IconSupport.vue";
