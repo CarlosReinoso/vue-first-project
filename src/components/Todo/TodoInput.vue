@@ -48,24 +48,43 @@ export default {
     class="custom-input"
   />
   <ul>
-    <li v-for="(item, index) in itemList" :key="index">
-      <ArrowIcon />
-      {{ item }}
+    <li v-for="(item, index) in itemList" :key="index" class="todo-item">
+      <div>
+        <ArrowIcon />
+      </div>
+      <p>{{ item }}</p>
       <button @click="deleteItem(index)">Delete</button>
     </li>
   </ul>
 </template>
 
-<style>
+<style lang="scss">
+@import "~/main.scss";
+
 .custom-input {
-  border: 3px solid #35495e;
+  border: 3px solid $primary-color;
   border-radius: 20px;
   padding: 10px;
   font-size: 16px;
+  margin-bottom: 2rem;
+  max-width: 100%; // Set a maximum width
+  word-wrap: break-word; // Wrap long words
+  overflow: hidden; // Hide overflow text
 }
 
 input.focused {
-  border: 2px solid #42b883;
+  border: 2px solid $secondary-color;
   outline: none;
+}
+
+.todo-item {
+  display: flex;
+  max-width: 20rem;
+  p {
+    margin-left: 1rem;
+  }
+  button {
+    margin-left: auto;
+  }
 }
 </style>
